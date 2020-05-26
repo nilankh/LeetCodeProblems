@@ -37,10 +37,6 @@
 
 
 
-
-
-
-
 def isMonotonic(A):
     increasing = decreasing = True
     for i in range(len(A) - 1):
