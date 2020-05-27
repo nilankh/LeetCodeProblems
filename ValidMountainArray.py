@@ -1,3 +1,5 @@
+#941
+
 def validMountainArray(arr):
     increasing = True
     #Catch small and only decreasing Series

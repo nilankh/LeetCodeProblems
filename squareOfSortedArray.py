@@ -1,3 +1,4 @@
+#977
 def Sorted(arr):
     l = len(arr)
     li = []
