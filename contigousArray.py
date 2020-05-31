@@ -1,5 +1,8 @@
 #525
 
+#length of subarray = currentIndex - mapindex
+#if sum == 0 then currentIndex + 1
+
 
 def contigousArrayLen(arr):
     mymap = {}
