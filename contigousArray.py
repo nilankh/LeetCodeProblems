@@ -26,10 +26,32 @@ def contigousArrayLen(arr):
             mymap[summ] = i
         print(mymap)
     return longest_subarray
-            
+
+#brute's force
+def findLength(arr):
+    maxLen = 0
+    for start in range(len(arr)):
+        zeroes = 0
+        ones = 0
+        for end in range(start, len(arr)):
+            if arr[end] == 0:
+                zeroes += 1
+            else:
+                ones += 1
+
+            if(zeroes == ones):
+                maxLen = max(maxLen, end - start + 1)
+        return maxLen
         
 
 
 arr = [int(x) for x in input().split()]
-k = contigousArrayLen(arr)
-print(k)
+##k = contigousArrayLen(arr)
+##print(k)
+print(findLength(arr))
+
+
+
+
+
+
