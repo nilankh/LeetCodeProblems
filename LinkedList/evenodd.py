@@ -39,15 +39,25 @@ def oddEven(head):
     even = head.next
     while odd.next and odd.next.next:
         temp = odd.next
+        #printLL(temp)
         odd.next = odd.next.next
+        #printLL(odd)
         odd = odd.next
+        #printLL(odd)
+        #printLL(temp)
+        #printLL(even)
         temp.next = odd.next
+        #printLL(temp)
+        #printLL(even)
+        
+        
     odd.next = even
+    
     return head
     
    
 head = takeInput()
-printLL(head)
+##printLL(head)
 
 
 printLL(oddEven(head))
