@@ -103,6 +103,7 @@ def calculate(n, pos, visited):
     global count
     if(pos > n):
         count += 1
+        return
     for i in range(1, n + 1):
         if(visited[i] is False and (pos % i == 0 or i % pos == 0)):
             visited[i] = True
