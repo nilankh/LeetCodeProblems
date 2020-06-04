@@ -25,30 +25,46 @@ Note:
 It is guaranteed that costs.length is even.
 1 <= costs[i][0], costs[i][1] <= 1000'''
 
-def twoCity(cost):
-##    k = sorted(cost, key = lambda x:x[0]-x[1])
-##    print(k)
-    refund = []
-    n = len(cost) // 2
-    minCost = 0
-    for a, b in cost:
-        #print("a", a , "    ", "b", b)
-        refund.append(b - a)
-        minCost += a
-    refund.sort()
-    #print(refund)
-    for i in range(n):
-        minCost += refund[i]
-    return minCost
+##def twoCity(cost):
+##
+##    refund = []
+##    n = len(cost) // 2
+##    minCost = 0
+##    for a, b in cost:
+##        #print("a", a , "    ", "b", b)
+##        refund.append(b - a)
+##        minCost += a
+##        #print("mincos", minCost)
+##    refund.sort()
+##    #print('refund',refund)
+##    for i in range(n):
+##        minCost += refund[i]
+##    return minCost
+
+def twoCity(costs):
+    costs = sorted(costs, key = lambda x:x[0]-x[1])
+    #print(costs)
+    n = len(costs)
+    cost = 0
+    for c in costs[:int(n/2)]:
+        #print("c",c)
+        cost += c[0]
+        #print("costgs",cost)
+    for c in costs[int(n/2):]:
+        #print("****************")
+        #print("c",c)
+        cost += c[1]
+        #print("costsssd",cost)
+    return cost
+
 
 
 str = input().split()
 n, m = int(str[0]), int(str[1])
 b = str[2:]
-cost= [[int(b[m * i + j]) for j in range(m)] for i in range(n)]
+costs= [[int(b[m * i + j]) for j in range(m)] for i in range(n)]
 
-print(twoCity(cost))
-
+print(twoCity(costs))
 
 
 
