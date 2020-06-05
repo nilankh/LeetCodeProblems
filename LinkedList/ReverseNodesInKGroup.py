@@ -26,10 +26,39 @@ def takeInput():
             tail=newNode
     return head
 
+def reverse3(head):
+    if head is None or head.next is None:
+        return head
+    smallHead=reverse3(head.next)
+    tail=head.next
+    tail.next=head
+    head.next=None
+    return smallHead
+
+def reverseK(head, k):
+    c = 0
+    curr = head
+    prev = None
+    while curr and c < k:
+        c += 1
+        prev = curr
+        curr = curr.next
+    if c == k:
+        prev.next = None
+        new_head = reverse3(head)
+        head.next = reverseK(curr, k)
+        return new_head
+    return head
+        
+        
+        
+    
+    
 
 head = takeInput()
 printLL(head)
-
+k = int(input())
+printLL(reverseK(head, k))
 
 
 
