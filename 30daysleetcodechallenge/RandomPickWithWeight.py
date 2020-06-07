@@ -26,7 +26,7 @@ The input is two lists: the subroutines called and their arguments. Solution's c
 
 import random
 class Solution:
-        def __init__(self, w)->int:
+        def __init__(self, w):
             self.prefix_sum = []
             prefix_sum = 0
             for weight in w:
@@ -49,7 +49,7 @@ class Solution:
 
 
 w = [1, 3]
-k = Solution.pickIndex(w)
+k = pickIndex(w)
 print(k)
 
 
