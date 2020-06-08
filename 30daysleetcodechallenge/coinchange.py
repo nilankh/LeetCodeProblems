@@ -5,7 +5,7 @@ def coinChange(amount, coins):
     for c in coins:
         for j in range(c, amount + 1):
             dp[j] += dp[j - c]
-        print(dp)
+        #print(dp)
     return dp[amount]
 
 
