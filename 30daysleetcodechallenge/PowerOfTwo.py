@@ -1,4 +1,6 @@
-import math
+#231
+
+
 def PowerOfTwo(n):
     #k = 0
     #k = int(math.sqrt(n))
