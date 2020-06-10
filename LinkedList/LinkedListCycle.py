@@ -37,19 +37,36 @@ def takeInput():
 ##        head = head.next
 ##    tail.next = 
     return head
+
+#1st method
+##def hasCycle(head):
+##
+##
+##    d = {}
+##    while(head):
+##        if head in d:
+##            return True
+##        else:
+##            d[head] = True
+##        
+##        head = head.next
+##    
+##    return False
+
+#2nd method two pointer method
 def hasCycle(head):
-
-
-    d = {}
-    while(head):
-        if head in d:
-            return True
-        else:
-            d[head] = True
-        
-        head = head.next
-    
-    return False
+    if pos == -1:
+        return False
+    if head == None or head.next == None:
+        return False
+    slow = head
+    fast = head.next
+    while(slow != fast):
+        if(fast == None and fast.next == None):
+            return False
+        slow = slow.next
+        fast = fast.next.next
+    return True
 
 
 pos = int(input())
