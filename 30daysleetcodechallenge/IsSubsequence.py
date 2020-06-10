@@ -1,3 +1,5 @@
+#392
+
 def isSubsequence(s, t):
 
     for i in s:
