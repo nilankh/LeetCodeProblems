@@ -60,11 +60,15 @@ def getIntersectionNode(headA, headB):
             
     
         
-   
+intersectionVal = takeInput()
+
 headA = takeInput()
 headB = takeInput()
 skipA = int(input())
 skipB = int(input())
+for i in range(skipA):
+    
+    
 
 ##k = getIntersectionNode(headA, headB)
 ##printLL(k)
