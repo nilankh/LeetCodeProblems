@@ -13,9 +13,16 @@ def searchInsertPostion(arr, val):
             low = mid + 1
     return low
 
-
-
+#2nd method
+def search(arr):
+    if val in arr:
+        return arr.index(val)
+    else:
+        arr.append(val)
+        arr.sort()
+        return(arr.index(val))
 arr = [int(x) for x in input().split()]
 val = int(input())
-k = searchInsertPostion(arr, val)
+#k = searchInsertPostion(arr, val)
+k = search(arr)
 print(k)
