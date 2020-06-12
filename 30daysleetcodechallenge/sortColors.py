@@ -29,6 +29,30 @@ sort012(arr,n)
 printarray(arr,n)
 
 
+#2nd method
+'''
+def sort012(arr):
+    l = len(arr)
+    i = 0
+    nZ = 0
+    nT = l - 1
+    while(i <= nT):
+        if(arr[i] == 0):
+            arr[i],arr[nZ] = arr[nZ],arr[i]
+            i = i + 1
+            nZ = nZ + 1
+        elif arr[i] == 2:
+            arr[i],arr[nT] = arr[nT],arr[i]
+            nT = nT - 1
+        else:
+            i = i + 1
+            
+n = int(input())
+arr = [int(x) for x in input().split()]
+sort012(arr)
+for num in arr:
+    print(num,end = ' ')
+print()'''
 
 
 
