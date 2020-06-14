@@ -65,12 +65,18 @@ def nextLargerNodes(head):
     while current:
         arr.append(current.data)
         current = current.next
+    #print("arr", arr)
     stack = []
     result = [0] * len(arr)
     for i in range(len(arr)):
+        #print("i", i)
         while stack and (arr[stack[len(stack) - 1]] < arr[i]):
+            #print("false")
             result[stack.pop()] = arr[i]
+            #print("result", result)
+        #print("Appended", i)
         stack.append(i)
+        #print("Stack", stack)
     return result
 head = takeInput()
 #printLL(head)
