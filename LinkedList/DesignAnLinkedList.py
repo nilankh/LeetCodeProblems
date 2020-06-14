@@ -83,6 +83,7 @@ class MyLinkedList:
                 prev.next = newNode
                 newNode.next = node
                 self.length += 1
+        
     def deleteAtIndex(self, index):
         """
         Delete the index-th node in the linked list, if the index is valid.
@@ -107,7 +108,37 @@ class MyLinkedList:
             if current == index:
                 prev.next = node.next
                 self.length -= 1
-              
+
+    def viewList(self):
+        if self.head == None:
+            print("Linked List is empty!!!")
+        else:
+            temp = self.head
+            while temp != None:
+                print(temp.val, end = " ")
+                temp = temp.next
+
+# Your MyLinkedList object will be instantiated and called as such:
+obj = MyLinkedList()
+obj.addAtHead(10)
+obj.addAtTail(20)
+obj.addAtTail(30)
+obj.addAtTail(40)
+obj.viewList()
+print()
+##obj.deleteAtIndex(0)
+##obj.viewList()
+print()
+obj.addAtIndex(1,21)
+
+k = obj.get(2)
+print("get value at index:", k)
+obj.viewList()
+# param_1 = obj.get(index)
+
+
+# obj.addAtIndex(index,val)
+# obj.deleteAtIndex(index)
 
 
             
