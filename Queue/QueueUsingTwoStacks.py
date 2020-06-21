@@ -31,3 +31,21 @@ class QueueUsingTwoStacks:
 
     def isEmpty(self):
         return self.size()==0
+
+
+
+
+q=QueueUsingTwoStacks()
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+q.enqueue(4)
+
+while(q.isEmpty() is False):
+    print(q.front())
+    q.dequeue()
+
+
+
+
+    
