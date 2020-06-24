@@ -17,3 +17,25 @@ class StackUsingQueues:
         while self.q1.qsize() > 1:
             self.q2.put(self.q1.get())
         ans = self.q1.get()
+        while(self.q2.qsize()!=0):
+            self.q1.put(self.q2.get())
+        return ans
+        #dono method sahi h   
+            
+    def top(self):
+        while self.q1.qsize() > 1:
+            self.q2.put(self.q1.get())
+        ans = self.q1.get()
+        self.q2.put(ans)
+        self.q1,self.q2 = self.q2,self.q1 
+        #self.count-=1
+        return ans
+        
+    def getSize(self):
+        return self.q1.qsize()
+
+
+
+
+
+    
