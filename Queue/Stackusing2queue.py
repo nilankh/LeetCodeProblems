@@ -17,6 +17,7 @@ class StackUsingQueues:
         while self.q1.qsize() > 1:
             self.q2.put(self.q1.get())
         ans = self.q1.get()
+        #print(ans)
         while(self.q2.qsize()!=0):
             self.q1.put(self.q2.get())
         return ans
