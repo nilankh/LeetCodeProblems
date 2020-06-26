@@ -11,5 +11,7 @@ def findD2(arr):
     for i in range(1, len(arr)):
         if arr[i] == arr[i - 1]:
             return arr[i]
+
+        
 arr = [int(x) for x in input().split()]
 print(findD2(arr))
