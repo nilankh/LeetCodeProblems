@@ -1,3 +1,4 @@
+#232
 class QueueUsingTwoStacks:
     def __init__(self):
         self.__s1=[]
