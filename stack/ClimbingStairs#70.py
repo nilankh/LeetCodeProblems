@@ -1,4 +1,5 @@
 #70
+'''
 def climbingStairs(n):
     #this will give tle
     if n == 1: return 1
@@ -10,3 +11,24 @@ def climbingStairs(n):
 ##setrecursionlimit(100000)
 n = int(input())
 print(climbingStairs(n))
+'''
+
+def climbingStairs(n):
+    a, b = 0, 1
+    for x in range(n):
+        a, b = b, a + b
+    return b
+
+
+n = int(input())
+print(climbingStairs(n))
+
+
+
+
+
+
+
+
+
+
