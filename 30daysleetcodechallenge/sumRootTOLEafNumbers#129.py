@@ -34,10 +34,12 @@ def sumRootToLeafNumbers(root):
     if not root.left and not root.right :
         return int(root.data)
     if root.left:
+        
         root.left.data = 10 * root.data + root.left.data
     if root.right:
+        
         root.right.data = 10 * root.data + root.right.data
-
+    
     return sumRootToLeafNumbers(root.left) + sumRootToLeafNumbers(root.right)
 
 
