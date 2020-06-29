@@ -50,6 +50,7 @@ def rec3(n, memo):
         else:
             break
     memo[n] = mini + 1
+    print(memo)
     return mini + 1
 
 n = int(input())
