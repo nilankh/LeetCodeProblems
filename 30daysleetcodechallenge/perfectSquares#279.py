@@ -29,9 +29,31 @@ def rec(n):
         else:
             break
     return mini + 1
+#3rd method memmoization
+
+def perfectSquares3(n):
+    memo = [0]*(n + 1)
+    return rec3(n, memo)
+def rec3(n, memo):
+    if n < 0:
+        return sys.maxsize
+    if n == 0:
+        return 0
+    if memo[n] > 0:
+        return memo[n]
+    mini = n
+    for i in range(1, n + 1):
+        temp = i * i
+        if temp <= n:
+            
+            mini = min(rec3(n - (i * i), memo), mini)
+        else:
+            break
+    memo[n] = mini + 1
+    return mini + 1
 
 n = int(input())
-print(perfectSquares2(n))
+print(perfectSquares3(n))
 
 
 
