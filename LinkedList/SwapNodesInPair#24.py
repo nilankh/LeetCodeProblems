@@ -58,10 +58,16 @@ def swapNodesInPairs(head):
 ##        prev.next = T
 ##    return curr
         
-        
+def swapNodesInPairsR(head):
+    if head and head.next:
+        temp = head.next
+        head.next = swapNodesInPairsR(temp.next)
+        temp.next = head
+        return temp
+    return head
 
 head = takeInput()
-printLL(swapNodesInPairs(head))
+printLL(swapNodesInPairsR(head))
 
 
 
