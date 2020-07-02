@@ -16,7 +16,11 @@ def dfs(board, i, j, count, word):
     board[i][j] = temp
     return found
 
-board =[['A','N','S','Q'],['S','O','L','R'],['K','T','O','G']]
-
-word = "SOLE"
+#board =[['A','N','S','Q'],['S','O','L','R'],['K','T','O','G']]
+r = input().split()
+b = r[2:]
+board = [[ b[int(r[1])*i+j] for j in range(int(r[1])) ] for i in range(int(r[0]))]
+#print(board)
+##word = "SOLE"
+word = input()
 print(exist(board, word))
