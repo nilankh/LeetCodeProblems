@@ -24,4 +24,5 @@ board = [[ b[int(r[1])*i+j] for j in range(int(r[1])) ] for i in range(int(r[0])
 ##word = "SOLE"
 word = input()
 print(exist(board, word))
- 
+
+
