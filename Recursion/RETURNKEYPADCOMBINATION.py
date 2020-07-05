@@ -31,6 +31,7 @@ def keypad(n):
         for c in optionForLastDigit:
             option = s + c
             output.append(option)
+            print(output)
     return output
 n = int(input())
 ans = keypad(n)
