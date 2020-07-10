@@ -15,3 +15,16 @@ for lst in output:
     for num in lst:
         print(num, end = ' ')
     print()
+
+
+
+
+
+
+
+
+
+
+
+
+
