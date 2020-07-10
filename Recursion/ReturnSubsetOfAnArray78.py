@@ -1,4 +1,11 @@
 def SubsetArray(arr):
+    n = len(arr)
+    if n <= 0:
+        output = [list()]
+        return output
+    smallerOutput = SubsetArray(arr[1:])
+    return smallerOutput + [[arr[0]] + b for b in smallerOutput]
+
     
 
 n = int(input())
