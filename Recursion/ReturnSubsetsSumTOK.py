@@ -32,3 +32,20 @@ arr = [int(x) for x in input().split()]
 k = int(input())
 output = subsets(arr, k)
 print(*output)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
