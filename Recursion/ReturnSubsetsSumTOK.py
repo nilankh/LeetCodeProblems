@@ -1,3 +1,4 @@
+#check rough page no 15 for correct dry run and 9 and 11
 def subsets(arr, k):
     return subsetsHelper(arr, 0, k)
 
@@ -16,6 +17,7 @@ def subsetsHelper(arr, si, k):
     for i in range(len(smallOutput1)):
         output[index] = smallOutput1[i]
         index += 1
+
 
     for i in range(len(smallOutput2)):
         output[index] = (len(smallOutput2[i]) + 1) * [0]
