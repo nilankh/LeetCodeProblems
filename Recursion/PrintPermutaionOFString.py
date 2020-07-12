@@ -1,3 +1,5 @@
+#checkrough page no 15 17
+
 def permutation(inputS, result, count, level):
     
     if(level == len(inputS)):
