@@ -1,4 +1,4 @@
-#checkrough page no 15 17
+#checkrough page no 15 17 18
 
 def permutation(inputS, result, count, level):
     
@@ -24,6 +24,7 @@ inputS = input()
 result = [0 for i in range(len(inputS))]
 count = [1 for i in range(len(inputS))]
 permutation(inputS, result, count, 0)
+
 
 
 
