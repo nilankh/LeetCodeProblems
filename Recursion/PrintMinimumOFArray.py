@@ -1,3 +1,4 @@
+#PRINTKE CASE PEHLE HMKO APNA KAAM KRNA HOTA H FIR RECURSION SE
 def printMin(l, minSoFar = 100000000):
     if len(l) == 0:
         print(minSoFar)

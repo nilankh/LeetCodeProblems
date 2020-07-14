@@ -1,3 +1,4 @@
+#PRINTKE CASE PEHLE HMKO APNA KAAM KRNA HOTA H FIR RECURSION SE
 def getString(d):
     if d == 2:
         return "abc"
