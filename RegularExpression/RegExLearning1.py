@@ -60,12 +60,15 @@ import re
 ##Example
 ##Replace every white-space character with the number 9:
 
+##txt = "The rain in Spain"
+##x = re.sub("\s", "9", txt)
+##print(x)
+##You can control the number of replacements by specifying the count parameter:
+##Example
+##Replace the first 2 occurrences:
 txt = "The rain in Spain"
-x = re.sub("\s", "9", txt)
+x = re.sub("\s", "9", txt, 2)
 print(x)
-
-
-
 
 
 
