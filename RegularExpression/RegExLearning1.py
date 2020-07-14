@@ -66,9 +66,45 @@ import re
 ##You can control the number of replacements by specifying the count parameter:
 ##Example
 ##Replace the first 2 occurrences:
-txt = "The rain in Spain"
-x = re.sub("\s", "9", txt, 2)
-print(x)
+##txt = "The rain in Spain"
+##x = re.sub("\s", "9", txt, 2)
+##print(x)
+
+
+
+
+##Match Object
+##A Match Object is an object containing information about the search and the result.
+##
+##Note: If there is no match, the value None will be returned, instead of the Match Object.
+##
+##Example
+##Do a search that will return a Match Object:
+
+
+##txt = "The rain in Spain"
+##x = re.search("ai", txt)
+##print(x) #this will print an object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
