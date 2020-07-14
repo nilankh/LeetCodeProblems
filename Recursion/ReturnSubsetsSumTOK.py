@@ -1,4 +1,4 @@
-check rough page no 15 for correct dry run and 9 and 11
+#check rough page no 15 for correct dry run and 9 and 11
 def subsets(arr, k):
     return subsetsHelper(arr, 0, k)
 
