@@ -48,17 +48,21 @@ import re
 ##print(x)
 
 ##You can control the number of occurrences by specifying the maxsplit parameter:
+##Example
+##Split the string only at the first occurrence:
 ##txt = "The rain in Spain"
 ##x = re.split("\s", txt, 1)
 ##print(x)
 
 
+##The sub() Function
+##The sub() function replaces the matches with the text of your choice
+##Example
+##Replace every white-space character with the number 9:
 
-
-
-
-
-
+txt = "The rain in Spain"
+x = re.sub("\s", "9", txt)
+print(x)
 
 
 
