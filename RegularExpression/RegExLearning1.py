@@ -107,7 +107,11 @@ import re
 ##start() will always be zero.
 
 
-
+##Example
+##Print the string passed into the function:
+##txt = "The rain in Spain"
+##x = re.search(r"\bS\w+", txt)
+##print(x.string)
 
 
 
