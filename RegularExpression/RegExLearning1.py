@@ -87,6 +87,29 @@ import re
 ##print(x) #this will print an object
 
 
+##The Match object has properties and methods used to retrieve information about the search, and the result:
+##
+##.span() returns a tuple containing the start-, and end positions of the match.
+##.string returns the string passed into the function
+##.group() returns the part of the string where there was a match
+
+
+##Example
+##Print the position (start- and end-position) of the first match occurrence.
+##
+##The regular expression looks for any words that starts with an upper case "S":
+
+
+##txt = "The rain in Spain"
+##x = re.search(r"\bS\w+", txt)
+##print(x.span())
+##span() returns both start and end indexes in a single tuple. Since the match() method only checks if the RE matches at the start of a string,
+##start() will always be zero.
+
+
+
+
+
 
 
 
