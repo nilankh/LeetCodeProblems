@@ -28,11 +28,15 @@
 
 #3rd method
 import math
+##def arrangeCoins(n):
+##    k = (int)(math.sqrt(2*n))
+##    sum = (int)(k*(k + 1)/2)
+##    if sum > n: return k - 1
+##    return k
+
+#4th method(follow page no 52codebix)
 def arrangeCoins(n):
-    k = (int)(math.sqrt(2*n))
-    sum = (int)(k*(k + 1)/2)
-    if sum > n: return k - 1
-    return k
+    return(int)((2*n+0.25)**0.5-0.5)
 n = int(input())
 print(arrangeCoins(n))
 
