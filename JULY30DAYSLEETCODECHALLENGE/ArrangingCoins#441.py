@@ -36,7 +36,8 @@ import math
 
 #4th method(follow page no 52codebix)
 def arrangeCoins(n):
-    return(int)((2*n+0.25)**0.5-0.5)
+##    return(int)((2*n+0.25)**0.5-0.5)
+    return(int)(math.sqrt(2*n+0.25)-0.5)    
 n = int(input())
 print(arrangeCoins(n))
 
