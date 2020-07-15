@@ -12,20 +12,46 @@
 ##        return i - 2
 
 #2ND METHOD
+##def arrangeCoins(n):
+##    left = 0
+##    right = n
+##    while left <= right:
+##        k = (right + left)//2
+##        curr = k * (k + 1)//2
+##        if curr == n:
+##            return k
+##        if n < curr:
+##            right = k - 1
+##        else:
+##            left = k + 1
+##    return right
+
+#3rd method
+import math
 def arrangeCoins(n):
-    left = 0
-    right = n
-    while left <= right:
-        k = (right + left)//2
-        curr = k * (k + 1)//2
-        if curr == n:
-            return k
-        if n < curr:
-            right = k - 1
-        else:
-            left = k + 1
-    return right
-
-
+    k = (int)(math.sqrt(2*n))
+    sum = (int)(k*(k + 1)/2)
+    if sum > n: return k - 1
+    return k
 n = int(input())
 print(arrangeCoins(n))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
