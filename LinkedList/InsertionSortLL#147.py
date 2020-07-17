@@ -57,7 +57,7 @@ def insertionSortRevised(head):
     if head is None:
         return head
     dummy = Node(0)
-    #print(dummy.next)
+    #print(dummy.data)
     pre = dummy
     nextt = None
     curr = head
