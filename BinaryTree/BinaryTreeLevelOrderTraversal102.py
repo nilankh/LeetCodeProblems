@@ -27,6 +27,22 @@ def printLevelATNewLine(root):
         List.append(ans)
     return List
 #according to codinNinjas
+def printLevelATNewLineC(root):
+    if root == None:
+        return
+    q1 = queue.Queue()
+    q2 = queue.Queue()
+    q1.put(root)
+    while not q1.empty():
+        while not q1.empty():
+            curr = q1.get()
+            print(curr.data, end = ' ')
+            if curr.left != None:
+                q2.put(curr.left)
+            if curr.right != None:
+                q2.put(curr.right)
+        q1, q2 = q2, q1
+        print()
 
 
 
@@ -62,8 +78,9 @@ def buildLevelTree(levelorder):
 #n=int(input())
 levelOrder = [int(i) for i in input().strip().split()]
 root = buildLevelTree(levelOrder)
-k = printLevelATNewLine(root)
-print(k)
+printLevelATNewLineC(root)
+##k = printLevelATNewLine(root)
+##print(k)
 
 
 
