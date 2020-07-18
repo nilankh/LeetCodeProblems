@@ -22,3 +22,14 @@ def prisonAfterNDays(cells, N):
 arr = [int(x) for x in input().split()]
 N = int(input())
 print(prisonAfterNDays(arr,N))
+def mulrec(m,n):
+    if n==0:
+        return 0
+    return m+mulrec(m,n-1)       
+
+m=int(input())
+n=int(input())
+print(mulrec(m,n))
+
+    
+g.bfs()

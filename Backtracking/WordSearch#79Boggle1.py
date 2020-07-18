@@ -1,4 +1,5 @@
 #79
+#Rough Page No 48
 def exist(board, word):
     for i in range(len(board)):
         for j in range(len(board[0])):
@@ -20,7 +21,7 @@ def dfs(board, i, j, count, word):
 r = input().split()
 b = r[2:]
 board = [[ b[int(r[1])*i+j] for j in range(int(r[1])) ] for i in range(int(r[0]))]
-#print(board)
+##print(board)
 ##word = "SOLE"
 word = input()
 print(exist(board, word))
