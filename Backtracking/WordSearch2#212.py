@@ -1,5 +1,5 @@
 #212
-
+#pagno43
 class TrieNode:
     def __init__(self):
         self.children = [None]*26
@@ -19,7 +19,8 @@ def findWords(board, words):
     trie = TrieNode()
     for w in words:
         trie.insert(w)
-    result = set()
+    result = set()#koi duplicate word na aaye islia set consider kr rhe h
+    
     
     for i in range(len(board)):
         for j in range(len(board[0])):
