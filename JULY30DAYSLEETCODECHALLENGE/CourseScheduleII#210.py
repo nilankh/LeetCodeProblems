@@ -16,7 +16,11 @@ def findOrder(numCourses, prerequisites):
     s.reverse()
     return s
     
-
+"""
+0--> unvisited
+1--> beign Visited
+2--> completely visited
+"""
 def dfs(u):
     visited[u] = 1
     for v in adj[u]:
