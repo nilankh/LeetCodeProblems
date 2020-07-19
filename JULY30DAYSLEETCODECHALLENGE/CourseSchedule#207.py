@@ -23,6 +23,70 @@ def canFinish(numCourses, prerequisites):
                 connection_removed += 1
     return connection_removed == numCourses
 
+
+
+"""
+0--> unvisited
+1--> beign Visited
+2--> completely visited
+"""
+def canFinish2ndMethod(numCourses, prerequisites):
+    global adj
+    adj = [None] * numCourses
+    for i in range(numCourses):
+        adj[i] = []
+    for pre in prerequisites:
+        adj[pre[0]].append(pre[1])
+
+    global visited 
+    visited = [0] * numCourses
+    for i in range(numCourses):
+        if visited[i] == 0 and not dfs(i):
+            return False
+    return True
+def dfs(v):
+    if visited[v] == 1:
+        return False
+    visited[v] = 1
+    for ad in adj[v]:
+        if not dfs(ad):
+            return False
+    visited[v] = 2
+    return True
+    
+  
+
 numCourses = 2
 prerequisites = [[1,0],[0,1]]
-print(canFinish(numCourses, prerequisites))
+
+# print(canFinish(numCourses, prerequisites))
+#visited = [0] * numCourses
+print(canFinish2ndMethod(numCourses, prerequisites))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
