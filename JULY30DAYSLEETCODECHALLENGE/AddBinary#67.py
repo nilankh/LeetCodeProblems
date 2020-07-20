@@ -20,8 +20,48 @@ def AddBinary(a, b):
 
 
 
-
+def AddBinary2(a, b):
+    carry = 0
+    result = ""
+    i = 0
+    alen = len(a)
+    blen = len(b)
+    while(i < alen or i < blen or carry != 0):
+        x = 0
+        if i < alen and a[alen - 1 - i] == '1':
+            x = 1
+        y = 0
+        if i < blen and b[blen - 1 - i] == '1':
+            y = 1
+        result = (x + y + carry)%2 + result
+        carry = (x + y + carry)//2
+        i+= 1
+    return result
+    
 
 a = input()
 b = input()
-print(AddBinary(a, b))
+print(AddBinary2(a, b))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
