@@ -82,7 +82,27 @@ ans = minStepsTo1I(n)
 print(ans)
 
 
+def length(head):
+    count = 0
+    while head is not None:
+        head = head.next
+        count += 1
+    return count
 
+def appendLastNToFirst(head, n) :
+    count = length(head) - n
+    curr = head
+    i = 1
+    while i < count:
+        curr = curr.next
+    	i+= 1
+    head2 = curr.next
+    curr.next = None
+    tail = head2
+    while tail.next != None:
+        tail = tail.next
+	tail.next = head
+    return head2
 
 
 
