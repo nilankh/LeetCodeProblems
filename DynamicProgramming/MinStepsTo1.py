@@ -56,18 +56,30 @@ def minStepsTo1M(n, dp):
 
 
 
+##n = int(input())
+##dp = [-1 for i in range(n + 1)]
+##ans = minStepsTo1M(n, dp)
+##print(ans)
+
+
+def minStepsTo1I(n):
+    dp = [-1 for i in range(n + 1)]
+    dp[0] = 0
+    dp[1] = 0
+    maxNum = sys.maxsize
+    for i in range(2, n + 1):
+        op1 = dp[i - 1]
+        op2 = dp[i // 2] if i % 2 == 0 else maxNum
+        op3 = dp[i // 3] if i % 3 == 0 else maxNum
+        dp[i] = 1 + min(op1, op2, op3)
+    return dp[n]
+    
+
+
+
 n = int(input())
-dp = [-1 for i in range(n + 1)]
-ans = minStepsTo1M(n, dp)
+ans = minStepsTo1I(n)
 print(ans)
-
-
-
-
-
-
-
-
 
 
 
