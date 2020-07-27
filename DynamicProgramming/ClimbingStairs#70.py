@@ -23,7 +23,7 @@ def helperM(n, dp):
     return dp[n]
 
 
-##iterative
+##iterative(ek baar leetcode ko dkho chota method v h_)
 def climbingStairsI(n):
     if n == 1:
         return 1
