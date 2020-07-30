@@ -1,4 +1,40 @@
-def LIS(li, i, n):
+
+##def LIS(li, i, n):
+##
+##    if i == n:
+##        return 0, 0
+##    
+##    including_max = 1#including myself
+##    for j in range(i + 1, n):
+##        
+##        #print(j)
+##        if li[j] >= li[i]:
+##            further_including_max = LIS(li, j, n)[0]
+##            #print(further_including_max)
+##            including_max = max(including_max, 1 + further_including_max)
+##            #print(including_max)
+##    excluding_max = LIS(li, i + 1, n)[1]
+##    #print(excluding_max)
+##    overallMax = max(including_max, excluding_max)
+##    #print(overallMax)
+##    return including_max, overallMax
+##
+##        
+##n = int(input())
+##li = [int(ele) for ele in input().split()]
+##ans = LIS(li, 0, n)[1]
+##print(ans)
+
+
+
+
+
+
+
+
+
+#MEmoization
+def LIS(li, i, n, dp):
 
     if i == n:
         return 0, 0
@@ -6,20 +42,58 @@ def LIS(li, i, n):
     including_max = 1#including myself
     for j in range(i + 1, n):
         
-        #print(j)
         if li[j] >= li[i]:
-            further_including_max = LIS(li, j, n)[0]
-            #print(further_including_max)
+            if dp[j] == -1:
+                ans = LIS(li, j, n, dp)
+                dp[j] = ans
+                further_including_max = ans[0]
+            else:
+                further_including_max = dp[j][0]
             including_max = max(including_max, 1 + further_including_max)
-            #print(including_max)
-    excluding_max = LIS(li, i + 1, n)[1]
-    #print(excluding_max)
+
+    if dp[i + 1] == -1:
+        ans = LIS(li, i + 1, n, dp)
+        dp[i + 1] = ans
+        excluding_max = ans[1]
+    else:
+        excluding_max = dp[i + 1][1]
+        
     overallMax = max(including_max, excluding_max)
-    #print(overallMax)
     return including_max, overallMax
 
         
 n = int(input())
 li = [int(ele) for ele in input().split()]
-ans = LIS(li, 0, n)[1]
+dp = [-1 for i in range(n + 1)]
+ans = LIS(li, 0, n, dp)[1]
 print(ans)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
