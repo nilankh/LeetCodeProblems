@@ -37,6 +37,7 @@ def minSquaresI(n):
         for j in range(1, root + 1):
             currAns = 1 + dp[i - (j ** 2)]
             ans = min(ans, currAns)
+            #print(dp)
         dp[i] = ans
     return dp[n]
         
@@ -50,7 +51,16 @@ print(ans)
 
 
 
-
+def long(string):
+    if len(string) == 0:
+        return ""
+    hum = string[0]
+    for i in range(1, len(string)):
+        while hm != string[i][:len(hum)]:
+            hum = hum[:-1]
+            if hum == "":
+                return ""
+    return hm
 
 
 
