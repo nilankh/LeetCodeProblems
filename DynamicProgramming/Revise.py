@@ -35,7 +35,7 @@ def lisI(arr, n):
     dp = [[0 for j in range(2)]for i in range(n + 1)]
     for i in range(n - 1, -1, -1):
         im = 1
-        for j i  range(i + 1, n):
+        for j in  range(i + 1, n):
             if arr[j] > arr[i]:
                 im = max(im, 1 + dp[j][0])
         dp[i][0] = im
