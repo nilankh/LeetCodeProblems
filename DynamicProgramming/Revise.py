@@ -31,7 +31,18 @@ def lisM(arr, i, n, dp):
         em = dp[i + 1][1]
     om = max(im, em)
     return im, om
-        
+def lisI(arr, n):
+    dp = [[0 for j in range(2)]for i in range(n + 1)]
+    for i in range(n - 1, -1, -1):
+        im = 1
+        for j i  range(i + 1, n):
+            if arr[j] > arr[i]:
+                im = max(im, 1 + dp[j][0])
+        dp[i][0] = im
+        em = dp[i + 1][1]
+        om = max(im, em)
+        dp[i][1] = om
+    return dp[0][1]
 n = int(input())
 li = [int(p) for p in input().split()]
 dp = [-1 for i in range(n + 1)]
