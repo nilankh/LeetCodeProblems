@@ -58,10 +58,14 @@ def detectCapital2(word):
     return True
     
 
+##word = input()
+##print(detectCapital2(word))
+
+def detectCapital3(word):
+    return True if len(word) < 2 or word.isupper() or word[1:].islower() else False
+
 word = input()
-print(detectCapital2(word))
-
-
+print(detectCapital3(word))
 
 
 
