@@ -59,3 +59,19 @@ n = len(p) - 1 #it represents the number of matrices
 dp = [[-1 for j in range(n + 1)] for i in range(n + 1)]
 ans = MCM(p, 1, n, dp)
 print(ans)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
