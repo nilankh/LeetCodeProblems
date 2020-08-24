@@ -16,6 +16,7 @@
 
 #Memoization Method
 #O(N^2)
+'''
 def canWinRM(n, cache):
     if n <= 1:
         return False
@@ -31,9 +32,13 @@ def canWinRM(n, cache):
     return False
 n = int(input())
 cache = [None for i in range(n + 1)]
-print(canWinRM(n, cache))
+print(canWinRM(n, cache))'''
 
-
+#3rd method mathmatical approach
+def canWinM(n):
+    return n % 2 == 0
+n = int(input())
+print(canWinM(n))
 
 
 
