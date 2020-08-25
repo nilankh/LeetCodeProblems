@@ -1,3 +1,4 @@
+#1025
 #page no 73-75
 #time complexity is O(2^n)
 ##def canWin(n):
