@@ -26,6 +26,7 @@ def isSubsequence(s,t):
            return True
     return s_idx == len(s)'''
 
+
 s = input()
 t = input()
 print(isSubsequence(s,t))
