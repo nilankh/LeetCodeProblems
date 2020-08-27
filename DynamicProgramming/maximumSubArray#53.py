@@ -1,5 +1,6 @@
 #53
 #page83
+#kadane's algorithm
 def maximumSubArray(arr):
     total_sum = max_sum = arr[0]
     for i in arr[1:]:
