@@ -18,21 +18,32 @@
 ##    return max(summ, summ2)
 
 #correct by recursion
-def houseRobber(arr):
-    return helper(arr, 0)
-def helper(arr, currentIndex):
+##def houseRobber(arr):
+##    return helper(arr, 0)
+##def helper(arr, currentIndex):
+##    if currentIndex >= len(arr):
+##        return 0
+##    stealCurrent = arr[currentIndex] + helper(arr, currentIndex + 2)
+##    skipCurrent = helper(arr, currentIndex + 1)
+##
+##    return max(stealCurrent, skipCurrent)
+    
+
+def houseRobberMemo(arr):
+    dp = [0 for i in range(len(arr) + 1)]
+    return houseRobberMemoHelper(arr, 0, dp)
+def houseRobberMemoHelper(arr, currentIndex, dp):
     if currentIndex >= len(arr):
         return 0
-    stealCurrent = arr[currentIndex] + helper(arr, currentIndex + 2)
-    skipCurrent = helper(arr, currentIndex + 1)
-
-    return max(stealCurrent, skipCurrent)
+    if dp[currentIndex] != 0:
+        return dp[currentIndex]
     
-
-
+    stealCurrent = arr[currentIndex] + houseRobberMemoHelper(arr, currentIndex + 2, dp)
+    skipCurrent = houseRobberMemoHelper(arr, currentIndex + 1, dp)
+    return dp[currentIndex] + max(stealCurrent, skipCurrent)
     
 arr = [int(l) for l in input().split()]
-print(houseRobber(arr))
+print(houseRobberMemo(arr))
 
 
 
