@@ -27,7 +27,8 @@
 ##    skipCurrent = helper(arr, currentIndex + 1)
 ##
 ##    return max(stealCurrent, skipCurrent)
-    
+##arr = [int(k) for k in input().split()]
+##print(houseRobber(arr))    
 
 ##def houseRobberMemo(arr):
 ##    dp = [0 for i in range(len(arr) + 1)]
@@ -47,24 +48,24 @@
 
 
 #iterative
-def houseRobI(arr):
-    if len(arr) == 0:
-        return 0
-    if len(arr) == 1:
-        return arr[0]
-    if len(arr) == 2:
-        return max(arr[0], arr[1])
-
-    dp = [0 for i in range(len(arr) + 1)]
-    dp[0] = arr[0]
-    dp[1] = max(arr[0], arr[1])
-
-    for i in range(2, len(arr)):
-        dp[i] = max(arr[i] + dp[i - 2], dp[i - 1])
-    return dp[len(arr) - 1]
-        
-arr = [int(k) for k in input().split()]
-print(houseRobI(arr))
+##def houseRobI(arr):
+##    if len(arr) == 0:
+##        return 0
+##    if len(arr) == 1:
+##        return arr[0]
+##    if len(arr) == 2:
+##        return max(arr[0], arr[1])
+##
+##    dp = [0 for i in range(len(arr) + 1)]
+##    dp[0] = arr[0]
+##    dp[1] = max(arr[0], arr[1])
+##
+##    for i in range(2, len(arr)):
+##        dp[i] = max(arr[i] + dp[i - 2], dp[i - 1])
+##    return dp[len(arr) - 1]
+##        
+##arr = [int(k) for k in input().split()]
+##print(houseRobI(arr))
     
 
 
