@@ -24,6 +24,9 @@ class NumArray:
             k += 1
         return summ
 
+
+            
+
 arr = [int(x) for x in input().split()]
 obj = NumArray(arr)
 param1 = obj.sumRange(0, 2)
