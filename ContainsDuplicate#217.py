@@ -16,6 +16,19 @@ print(containsDuplicate(arr))
 
 
 
+##def FindDuplicates(arr):
+##    size=len(arr)
+##    result=0
+##    for i in range(0,size-1):
+##        result^=i
+##        result^=arr[i]
+##    return result^arr[size-1]
+##
+##n=int(input())
+##arr=[int(x) for x in input().split()]
+##ans=FindDuplicates(arr)
+##print(ans)
+
 
 
 
