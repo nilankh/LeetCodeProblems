@@ -1,5 +1,5 @@
 #219
-#95page
+#95page 96page all explanation thing written
 ##TLE APPROACH
 ##def containsDuplicate(arr, k):
 ##    for i in range(len(arr)):
@@ -9,6 +9,7 @@
 ##                if t <= k:
 ##                    return True
 ##    return False
+
 def containsDuplicate(arr, k):
     d = {}
     for i in range(len(arr)):
