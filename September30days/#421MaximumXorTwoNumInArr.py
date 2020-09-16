@@ -1,4 +1,4 @@
-
+#time complexity O(n^2)
 
 def maximumXOR(arr):
     maxi = 0
