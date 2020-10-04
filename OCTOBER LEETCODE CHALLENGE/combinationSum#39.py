@@ -1,44 +1,40 @@
 #39
 #103page
 
-def combinationSum(candidates, target):
-    if target == 0:
-        return [[]]
-    ans = []
-    for i, n in enumerate(candidates):
-        if target >= n:
-            ans += [[n] + k for k in combinationSum(candidates[i:], target - n)]
-    return ans
+##def combinationSum(candidates, target):
+##    if target == 0:
+##        return [[]]
+##    ans = []
+##    for i, n in enumerate(candidates):
+##        if target >= n:
+##            ans += [[n] + k for k in combinationSum(candidates[i:], target - n)]
+##    return ans
+##
+##candidates = [int(x) for x in input().split()]
+##target = int(input())
+##print(combinationSum(candidates, target))
 
-candidates = [int(x) for x in input().split()]
-target = int(input())
-print(combinationSum(candidates, target))
 
-
-def comibationSumm(candidates, target):
+def combinationSumm(candidates, target):
     res = []
     if(len(candidates) == 0):
         return res;
-    candidates.sort()
-
-    toFindCombinationsToTarget(res, [], candidates, target, 0)
+    dfs(candidates, target,[], res)
     return res
 
-def toFindCombinationsToTarget(res, combination, candidates, target, startIndex):
+def dfs(candidates, target, path, res):
     if target == 0:
-        res.append(combination)
+        res.append(path)
         return
-    for i in range(startIndex, len(candidates)):
+    for i in range(len(candidates)):
         if candidates[i] > target:
             continue
         
-        combination.append(candidates[i])
-        toFindCombinationsToTarget(res, combination, candidates, target - candidates[i], i)
-        combination.pop()
+        dfs(candidates[i:], target - candidates[i], path + [candidates[i]], res)
         
 candidates = [int(x) for x in input().split()]
 target = int(input())
-print(combinationSumm(candidates, target))    
+print(combinationSumm(candidates, target))     
 
     
 
