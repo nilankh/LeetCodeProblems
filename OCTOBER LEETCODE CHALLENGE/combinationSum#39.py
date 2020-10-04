@@ -15,7 +15,30 @@ target = int(input())
 print(combinationSum(candidates, target))
 
 
-   
+def comibationSumm(candidates, target):
+    res = []
+    if(len(candidates) == 0):
+        return res;
+    candidates.sort()
+
+    toFindCombinationsToTarget(res, [], candidates, target, 0)
+    return res
+
+def toFindCombinationsToTarget(res, combination, candidates, target, startIndex):
+    if target == 0:
+        res.append(combination)
+        return
+    for i in range(startIndex, len(candidates)):
+        if candidates[i] > target:
+            continue
+        
+        combination.append(candidates[i])
+        toFindCombinationsToTarget(res, combination, candidates, target - candidates[i], i)
+        combination.pop()
+        
+candidates = [int(x) for x in input().split()]
+target = int(input())
+print(combinationSumm(candidates, target))    
 
     
 
