@@ -23,6 +23,8 @@ def combinationSumm(candidates, target):
     return res
 
 def dfs(candidates, target, path, res):
+    if target < 0:
+        return
     if target == 0:
         res.append(path)
         return
