@@ -62,9 +62,3 @@ prerequisites = [[1,0],[0,1]]
 # print(canFinish(numCourses, prerequisites))
 #visited = [0] * numCourses
 print(canFinish2ndMethod(numCourses, prerequisites))
-
-
-
-
-
-
