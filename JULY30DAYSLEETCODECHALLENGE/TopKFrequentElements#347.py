@@ -27,5 +27,3 @@ k = int(input())
 f = topKfreqElements(arr, k)
 print(f)
 
-
-
