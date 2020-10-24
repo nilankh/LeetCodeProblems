@@ -51,6 +51,3 @@ def takeInputOfBT():
 
 root=takeInputOfBT()
 printTree(root)
-
-
-
