@@ -48,10 +48,6 @@ def takeInputOfBT():
     root.left=leftTree
     root.right=rightTree
     return root
-
 root=takeInputOfBT()
 printTree(root)
-
-
-
 
