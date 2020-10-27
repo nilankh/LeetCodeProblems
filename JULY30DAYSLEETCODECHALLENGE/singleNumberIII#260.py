@@ -12,6 +12,8 @@ def singleNumber(arr):
             k.append(i)
     return k
 
+
+
 arr = [int(x) for x in input().split()]
 k = singleNumber(arr)
 print(*k)
