@@ -13,8 +13,6 @@ def singleNumber(arr):
     return k
 
 
-
-
 arr = [int(x) for x in input().split()]
 k = singleNumber(arr)
 print(*k)
