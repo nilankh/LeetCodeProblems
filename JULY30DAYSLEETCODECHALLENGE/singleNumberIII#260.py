@@ -11,8 +11,6 @@ def singleNumber(arr):
         if d[i] == 1:
             k.append(i)
     return k
-
-
 arr = [int(x) for x in input().split()]
 k = singleNumber(arr)
 print(*k)
