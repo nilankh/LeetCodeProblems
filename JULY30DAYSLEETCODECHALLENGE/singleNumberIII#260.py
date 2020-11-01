@@ -16,6 +16,3 @@ k = singleNumber(arr)
 print(*k)
 
 
-
-
-
