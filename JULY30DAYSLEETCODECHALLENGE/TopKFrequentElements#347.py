@@ -19,12 +19,13 @@ def topKfreqElements(arr, k):
             return l
     return l
 
-
-
 arr = [int(x) for x in input().split()]
 k = int(input())
 f = topKfreqElements(arr, k)
 print(f)
+
+
+
 
 
 
