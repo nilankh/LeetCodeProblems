@@ -22,12 +22,3 @@ a = input()
 b = input()
 print(AddBinary(a, b))
 
-
-
-
-
-
-
-
-
-
