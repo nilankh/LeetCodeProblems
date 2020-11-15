@@ -29,8 +29,6 @@ def takeInput():
 
 
 
-
-
 def midpointLL(head):
     slow = head
     fast = head
