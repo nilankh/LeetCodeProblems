@@ -38,3 +38,6 @@ def reverse(head):
 head=takeInput()
 l=reverse(head)
 printLL(l)
+
+
+
