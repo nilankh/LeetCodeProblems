@@ -62,6 +62,7 @@ def swapNodesInPairs(head):
 ##        prev.next = T
 ##    return curr
         
+        
 def swapNodesInPairsR(head):
     if head and head.next:
         temp = head.next
