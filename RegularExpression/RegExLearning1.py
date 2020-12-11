@@ -40,8 +40,6 @@ import re
 
 
 
-
-
 ##The split() Function
 ##The split() function returns a list where the string has been split at each match:
 
