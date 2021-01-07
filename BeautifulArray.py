@@ -1,6 +1,7 @@
 #932
 
     
+    
 def beautifulArray(n):
     arr = list(range(1, n + 1))
     def helper(arr):
