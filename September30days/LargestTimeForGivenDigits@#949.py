@@ -20,10 +20,6 @@ def largestTimeForGivenDigits(arr):
                     result = timee
     return result
 
-
-
-
-
 arr = [int(d) for d in input().split()]
 print(largestTimeForGivenDigits(arr))
 
