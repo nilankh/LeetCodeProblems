@@ -31,18 +31,24 @@ def printLevelWise(root):
 def buildTreePreOrder(preOrder,inOrder):
     if len(preOrder)==0:
         return None
+    # as we know 0th index of preOrder is our root
     rootData=preOrder[0]
     root=BinaryTreeNode(rootData)
     rootIndex=-1
+    # Searching root value in preOder
     for i in range(len(inOrder)):
         if(inOrder[i]==rootData):
             rootIndex=i
             break
     if rootIndex==-1:
         return None
+    # leftInoder
     leftIn=inOrder[:rootIndex]
+    # rightInorder
     rightIn=inOrder[rootIndex+1:]
+    # finding length of elements in leftIn so that we can understand that how many elements in left preoder
     left=len(leftIn)
+    # Calling recursion on both left and right with finding preOrder of both left and right
     leftChild=buildTreePreOrder(preOrder[1:left+1],leftIn)
     rightChild=buildTreePreOrder(preOrder[left+1:],rightIn)
     root.left=leftChild
