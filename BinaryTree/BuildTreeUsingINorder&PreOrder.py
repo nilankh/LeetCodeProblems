@@ -48,31 +48,15 @@ def buildTreePreOrder(preOrder,inOrder):
     rightIn=inOrder[rootIndex+1:]
     # finding length of elements in leftIn so that we can understand that how many elements in left preoder
     left=len(leftIn)
-    # Calling recursion on both left and right with finding preOrder of both left and right
+
+    
+    # Calling recursion on both left and right with finding preOrder of both left and right    
     leftChild=buildTreePreOrder(preOrder[1:left+1],leftIn)
     rightChild=buildTreePreOrder(preOrder[left+1:],rightIn)
     root.left=leftChild
     root.right=rightChild
     return root
-'''
-def printLevelATNewLine(root):
-    # Given a binary tree, print the level order traversal. Make sure each level
-    # start in new line.
-    if root==None:
-        return
-    inputQ = queue.Queue()
-    outputQ = queue.Queue()
-    inputQ.put(root)
-    while not inputQ.empty():
-        while not inputQ.empty():
-            curr = inputQ.get()
-            print(curr.data, end=' ')
-            if curr.left!=None:
-                outputQ.put(curr.left)
-            if curr.right!=None:
-                outputQ.put(curr.right)
-        print()
-        inputQ, outputQ = outputQ, inputQ'''
+
 n=int(input())
 preorder=[int(z) for z in input().split()]
 inorder=[int(f) for f in input().split()]
@@ -83,45 +67,3 @@ printLevelWise(root)
 
 
 
-'''
-def index(arr,data):
-    count=0
-    if len(arr)==0:
-        return count
-    for i in arr:
-        if i!=data:
-            count+=1
-        else:
-            return count
-            
-def buildTreePreOrder(preorder, inorder):
-    if len(preorder)==0 and len(inorder)==0:
-        return None
-    root=BinaryTreeNode(preorder[0])
-    i=index(inorder,preorder[0])
-    leftarr=preorder[1:i+1]
-    rightarr=preorder[i+1:]
-    leftin=inorder[:i]
-    rightin=inorder[i+1:]
-    root.left=buildTreePreOrder(leftarr,leftin)
-    root.right=buildTreePreOrder(rightarr,rightin)
-    return root
-
-#by manjeetSir
-'''
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-        
