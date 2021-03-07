@@ -38,7 +38,7 @@ def buildTreePostOrder(postorder,inOrder):
         if(inOrder[i] == rootData):
             rootIndex = i
             break
-    length = len(postorder)
+    # length = len(postorder)
     leftTree = buildTreePostOrder(postorder[:rootIndex], inOrder[:rootIndex])
     rightTree = buildTreePostOrder(postorder[rootIndex: -1], inOrder[rootIndex + 1:])
     root.left=leftTree
