@@ -49,6 +49,7 @@ n=int(input())
 postorder=[int(z) for z in input().split()]
 inorder=[int(f) for f in input().split()]
 root=buildTreePostOrder(postorder,inorder)
+
 printLevelWise(root)
 #printLevelATNewLine(root)
 
