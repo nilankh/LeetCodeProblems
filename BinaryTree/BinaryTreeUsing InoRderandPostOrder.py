@@ -45,6 +45,7 @@ def buildTreePostOrder(postorder,inOrder):
     root.right=rightTree
     return root
     
+    
 n=int(input())
 postorder=[int(z) for z in input().split()]
 inorder=[int(f) for f in input().split()]
