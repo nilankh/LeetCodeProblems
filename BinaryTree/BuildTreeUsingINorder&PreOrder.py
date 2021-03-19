@@ -53,6 +53,7 @@ def buildTreePreOrder(preOrder,inOrder):
     # leftPreorder = preOrder[1:lenleftSubtree + 1]
     # rightPreOrder = preOrder[lenleftSubtree + 1:]
     
+    
     # Calling recursion on both left and right with finding preOrder of both left and right    
     leftChild=buildTreePreOrder(preOrder[1:left+1],leftIn)
     rightChild=buildTreePreOrder(preOrder[left+1:],rightIn)
