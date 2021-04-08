@@ -9,6 +9,7 @@
 
 
 
+
 string = "abab"
 d = {}
 for w in string:
