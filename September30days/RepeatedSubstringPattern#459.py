@@ -5,9 +5,8 @@
 ##
 ##
 ##string = input()
+
 ##print(repeatedSubstringPatter(string))
-
-
 
 
 string = "abab"
