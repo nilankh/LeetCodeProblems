@@ -8,7 +8,6 @@ class BinaryTreeNode:
         self.right = None
 
 
-
 def printLevelATNewLine(root):
     if root is None:
         return root
