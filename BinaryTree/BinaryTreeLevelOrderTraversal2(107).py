@@ -8,7 +8,6 @@ class BinaryTreeNode:
         self.right = None
 
 
-
 def printLevelATNewLine(root):
     if root is None:
         return root
@@ -67,12 +66,6 @@ levelOrder = [int(i) for i in input().strip().split()]
 root = buildLevelTree(levelOrder)
 k = printLevelATNewLine(root)
 print(k)
-
-
-
-
-
-
 
 
 
